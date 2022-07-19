@@ -1,6 +1,7 @@
 using CppSharp;
 using CppSharp.AST;
 using CppSharp.Generators;
+using CppSharp.Passes;
 
 namespace BimgCppSharpTest;
 
@@ -37,10 +38,12 @@ public class Bgfx : ILibrary
         });
 
         module.LibraryDirs.Add("libs");
-        module.Libraries.Add("libbgfx-shared-libDebug.so");
+        module.Libraries.Add("libbgfx-shared-libRelease.so");
     }
 
     public void SetupPasses(Driver driver)
     {
+        driver.Context.TranslationUnitPasses.RenameDeclsUpperCase(RenameTargets.Any);
+        driver.Context.TranslationUnitPasses.AddPass(new FunctionToInstanceMethodPass());
     }
 }

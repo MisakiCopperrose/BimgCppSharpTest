@@ -29,12 +29,10 @@
       <None Update="include\platform.h">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="libs\libbgfx-shared-libDebug.so">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="libs" />
       <Folder Include="Results" />
     </ItemGroup>
 
