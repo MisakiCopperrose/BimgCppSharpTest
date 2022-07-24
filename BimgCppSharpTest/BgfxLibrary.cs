@@ -5,7 +5,7 @@ using CppSharp.Passes;
 
 namespace BimgCppSharpTest;
 
-public class Bgfx : ILibrary
+public class BgfxLibrary : ILibrary
 {
     public void Preprocess(Driver driver, ASTContext ctx)
     {
@@ -13,7 +13,7 @@ public class Bgfx : ILibrary
 
     public void Postprocess(Driver driver, ASTContext ctx)
     {
-    }
+    } 
 
     public void Setup(Driver driver)
     {
@@ -38,7 +38,7 @@ public class Bgfx : ILibrary
         });
 
         module.LibraryDirs.Add("libs");
-        module.Libraries.Add("libbgfx-shared-libRelease.so");
+        module.Libraries.Add("bgfx-shared-libRelease.dll");
     }
 
     public void SetupPasses(Driver driver)

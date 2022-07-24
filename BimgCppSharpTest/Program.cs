@@ -1,3 +1,3 @@
 ﻿using CppSharp;
 
-ConsoleDriver.Run(new BimgCppSharpTest.Bgfx());
+ConsoleDriver.Run(new BimgCppSharpTest.BgfxLibrary());
